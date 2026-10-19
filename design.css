@@ -1,0 +1,1218 @@
+:root {
+            --bg-black: #080808;
+            --bg-card: #121212;
+            --racing-yellow: #e0a226;
+            --racing-red: #8f2246;
+            --text-white: #FFFFFF;
+            --text-gray: #A0A0A0;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(8, 8, 8, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            z-index: 100;
+        }
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-logo-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+.brand-name {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+}
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--racing-yellow), var(--racing-red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: var(--font-display);
+            color: var(--bg-black);
+            font-size: 1.1rem;
+        }
+
+        .brand-title {
+            font-family: var(--font-display);
+            color:#FFFFFF;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-tab {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 6px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-tab::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background-color: var(--racing-red);
+            box-shadow: 0 0 10px var(--racing-red);
+            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .nav-tab:hover::after,
+        .nav-tab.active::after {
+            width: 100%;
+        }
+
+        .nav-tab:hover {
+            color: #ffffff;
+        }
+
+        .hamburger-btn {
+            display: none;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger-btn span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--text-white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-drawer {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-black);
+            border-bottom: 2px solid var(--racing-yellow);
+            padding: 20px 5%;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 99;
+        }
+
+        .mobile-nav-drawer.open {
+            display: flex;
+        }
+
+        .mobile-nav-tab {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--text-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 3px solid transparent;
+            padding-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-tab:hover {
+            border-left-color: var(--racing-red);
+            color: var(--racing-yellow);
+        }
+
+    .home_section {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--bg-black);
+        }
+
+        .home_container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+        .home_left {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+
+        .home_title {
+            font-family: var(--font-display);
+            font-size: 5.5rem;
+            line-height: 0.95;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .home_title .title-yellow {
+            color: var(--racing-yellow);
+            display: block;
+        }
+
+        .pitch_box {
+            border: 1px solid var(--racing-yellow);
+            border-left: 4px solid var(--racing-yellow);
+            padding: 20px 24px;
+            max-width: 500px;
+            background-color: rgba(18, 18, 18, 0.6);
+            margin-top: 10px;
+        }
+
+        .pitch-title {
+            font-family: "Ubuntu", sans-serif;
+            font-size: 1.15rem;
+            color: var(--text-white);
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+
+        .home_right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .car-render-card {
+            width: 100%;
+            max-width: 440px;
+            aspect-ratio: 4 / 3;
+            background-color: var(--bg-card);
+            border: 1px solid var(--racing-yellow);
+            transform: rotate(2.5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 15px rgba(245, 197, 24, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .car-render-card:hover {
+            transform: rotate(0deg) scale(1.02);
+            border-color: var(--racing-red);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 25px rgba(255, 46, 46, 0.3);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+            transition: filter 0.3s ease;
+        }
+
+        .car-render-card:hover .car-image {
+            filter: brightness(1);
+        }
+
+        .car-render-label {
+            position: absolute;
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-white);
+            text-transform: uppercase;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .btn-learn-car {
+            display: inline-block;
+            border: 1.5px solid var(--racing-yellow);
+            background: transparent;
+            color: var(--text-white);
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 14px 28px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-learn-car:hover {
+            background-color: var(--racing-yellow);
+            color: var(--bg-black);
+            box-shadow: 0 0 20px rgba(245, 197, 24, 0.4);
+        }
+
+        .marquee-container {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #F5C518;
+    color: #080808;
+    overflow: hidden;
+    padding: 10px 0;
+    border-top: 2px solid #080808;
+    border-bottom: 2px solid #080808;
+    margin-top: 0;
+}
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: infiniteMarquee 18s linear infinite;
+        }
+
+        .marquee-text {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0 15px;
+            white-space: nowrap;
+        }
+
+.about_container{
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+.about_title{
+    font-family: var(--font-display);
+            font-size: 4rem;
+            line-height: 0.95;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+}
+.about_text{
+    margin-top:10%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+.about_image{width: 100%;
+    width: 500px;
+    height: 360px;
+
+    object-fit: cover;
+    display: block;
+
+    border: 2px solid var(--racing-yellow);
+    border-radius: 8px;
+
+    background-color: var(--bg-card);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(245, 197, 24, 0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_image:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(245, 197, 24, 0.35);
+}
+
+.competition-section {
+    width: 100%;
+    padding: 80px 5%;
+}
+
+.competition-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+
+.competition-card {
+    min-height: 200px;
+
+    padding: 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #3b0b0b;
+
+    border: 1px solid #7d1515;
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.competition-card:hover {
+    transform: translateY(-8px);
+
+    background: #501010;
+
+    border-color: var(--racing-yellow);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(245, 197, 24, 0.15);
+}
+
+
+.competition-card h3 {
+    font-family: var(--font-display);
+    color: #daa700;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+.competition-card p {
+    margin: 0 0 25px;
+    font-family: "Ubuntu", sans-serif;
+    color: #ece9e9;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.competition-card span {
+    color: var(--racing-yellow);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.competition-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    z-index: 9999;
+}
+
+.competition-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+ 
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background: #050505;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(245, 197, 24, 0.08);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+.competition-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background: #111;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+.modal-cotent:hover .modal-image img {
+    transform: scale(1.03);
+}
+
+.modal-text {
+    padding: 70px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-text h2 {
+    margin: 0 0 25px;
+
+    color: var(--racing-yellow);
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.modal-text p {
+    margin: 0 0 20px;
+    font-family: "Ubuntu", sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--racing-yellow);
+
+    color: #000000;
+
+    border-color: var(--racing-yellow);
+}
+
+
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+.team-section {
+    width: 100%;
+    max-width: 120px;
+    margin-top:10%;
+    margin: 0 auto;
+
+    padding: 100px 30px;
+}
+
+
+.team-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.team-header h1 {
+    margin: 0 0 15px;
+    font-family: var(--font-display);
+    margin-top:4%;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.team-header h1::after {
+    content: "";
+    display: block;
+    width: 200px;
+    margin: 10px auto 0;
+    height: 3px;
+    background: var(--racing-yellow);
+}
+
+.team-header p {
+    margin-top:2%;
+    font-family: "Ubuntu", sans-serif;
+    color: #999999;
+    font-size: 16px;
+}
+
+
+
+.team-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 30px;
+    margin-left: 10%;
+}
+
+
+
+.team-member {
+    text-align: center;
+}
+
+
+
+.team-image {
+    width: 80%;
+    aspect-ratio: 4/4;
+    overflow: hidden;
+    background: #111111;
+    border: 1px solid #333333;
+    border-radius: 80px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-member:hover .team-image {
+    transform: translateY(-6px);
+    border-color: var(--racing-yellow);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(245, 197, 24, 0.15);
+}
+
+.team-member:hover .team-image img {
+    transform: scale(1.04);
+}
+
+
+.team-info {
+    padding-top: 20px;
+    margin-right: 35%;
+}
+
+
+.team-info h2 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.team-info p {
+    margin: 7px 0 0;
+    color: var(--racing-yellow);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom:5%;
+}
+
+
+.contact-section {
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 100px 30px;
+}
+
+
+
+.sponsors-header,
+.sponsor-us-header {
+    text-align: center;
+}
+
+
+.sponsors-header h1,
+.sponsor-us-header h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+
+.sponsors-header h1::after,
+.sponsor-us-header h1::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: var(--racing-yellow);
+    margin-bottom: 10px;
+}
+
+
+.sponsors-header p,
+.sponsor-us-header p {
+    margin: 0;
+
+    color: #999999;
+
+    font-size: 16px;
+}
+
+
+.sponsors-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 55px;
+}
+
+
+.sponsor-card {
+    overflow: hidden;
+
+    background: #111111;
+
+    border: 1px solid #333333;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.sponsor-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--racing-yellow);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(245, 197, 24, 0.12);
+}
+
+
+.sponsor-image {
+    width: 100%;
+    height: 150px;
+
+    background: #1a1a1a;
+}
+
+
+.sponsor-image img {
+    width: 60%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.sponsor-info {
+    padding: 25px;
+}
+
+
+.sponsor-info h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+
+.sponsor-info p {
+    margin: 0;
+    color: #999999;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+
+.sponsor-us {
+    margin-top: 40px;
+}
+
+
+.sponsor-us-header {
+
+    margin-bottom: 55px;
+}
+
+
+.contact-container {
+    display: grid;
+    margin-left:8%;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    column-gap: 20%;
+
+    align-items: start;
+}
+
+
+
+.contact-socials {
+    grid-column:1;
+    padding-top: 10px;
+}
+
+
+.contact-socials h2 {
+    margin: 0 0 20px;
+    font-family: var(--font-display);
+    color: var(--racing-yellow);
+
+    font-size: 25px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.contact-socials > p {
+    margin: 0 0 20px;
+    font-family: "Ubuntu", sans-serif;
+    color: #aaaaaa;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+
+.social-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.social-link {
+    width: fit-content;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.social-link:hover {
+    color: var(--racing-yellow);
+
+    transform: translateX(5px);
+}
+.contact_from {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.contact_button {
+    margin-top: 1%;
+    width: 100%;
+    max-width: 70px;
+    min-height: 30px;
+    padding: 5px 5px;
+    background: var(--racing-yellow);
+    color: #000000;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.contact_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 197, 24, 0.2);
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    max-width: 400px;
+}
+.form_label{
+    font-family: "ubuntu", sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+
+@media (max-width: 850px) {
+
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-card {
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .contact-section {
+        padding: 70px 20px;
+    }
+
+    .sponsors-header h1,
+    .sponsor-us-header h1 {
+        font-size: 32px;
+    }
+
+    .sponsor-us {
+        margin-top: 90px;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px 25px;
+    }
+
+    .team-header h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .team-section {
+        padding: 70px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .team-header {
+        margin-bottom: 40px;
+    }
+
+    .team-header h1 {
+        font-size: 32px;
+    }
+
+    .team-image {
+        aspect-ratio: 1 / 1;
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .competition-container {
+        grid-template-columns: 1fr;
+    }
+
+    .competition-card {
+        min-height: 180px;
+    }
+
+    .modal-content {
+        max-width: 700px;
+
+        grid-template-columns: 1fr;
+
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-image {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .modal-text {
+        padding: 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .competition-section {
+        padding: 50px 20px;
+    }
+
+    .competition-card {
+        padding: 25px;
+    }
+
+    .competition-card h3 {
+        font-size: 20px;
+    }
+
+    .competition-modal {
+        padding: 15px;
+    }
+
+    .modal-content {
+        border-radius: 14px;
+    }
+
+    .modal-image {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .modal-text {
+        padding: 30px 25px;
+    }
+
+    .modal-text h2 {
+        font-size: 25px;
+    }
+
+    .modal-text p {
+        font-size: 14px;
+    }
+
+}
+
+
+        
+        @keyframes infiniteMarquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .home_title {
+                font-size: 4.2rem;
+            }
+            .home_container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+            .home_left {
+                align-items: center;
+            }
+            .car-render-card {
+                transform: rotate(0deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .home_section {
+        min-height: 100svh;
+        padding-top: 90px;
+    }
+
+    .home_container {
+        width: 90%;
+        padding: 30px 0 40px;
+        gap: 40px;
+    }
+
+    .home_title {
+        font-size: 3.2rem;
+    }
+
+    .pitch_box {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .pitch-title {
+        font-size: 1rem;
+    }
+
+    .car-render-card {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .marquee-text {
+        font-size: 1.1rem;
+    }
+}

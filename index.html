@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULLET RACING</title>
+    <link rel="stylesheet" href="design.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="#home" class="brand-logo">
+            <img src="Logo.svg" alt="asdasdsad" class="brand-logo-image" >
+            <img src="Name.svg" alt="asdasdsad" class="brand-name">
+        </a>
+
+
+        <nav class="desktop-nav">
+            <a href="#about" class="nav-tab">ABOUT</a>
+            <a href="#team" class="nav-tab">TEAM</a>
+            <a href="#contact" class="nav-tab">CONTACT US</a>
+        </nav>
+
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <a href="#home" class="mobile-nav-tab">HOME</a>
+        <a href="#about" class="mobile-nav-tab">ABOUT</a>
+        <a href="#team" class="mobile-nav-tab">TEAM</a>
+        <a href="#contact" class="mobile-nav-tab">CONTACT US</a>
+    </div>
+
+    <main>
+        <section id="home" class="home_section">
+            
+            <div class="home_container">
+                
+                <div class="home_left">
+                    <h1 class="home_title">
+                        BULLET
+                        <span class="title-yellow">RACING</span>
+                    </h1>
+
+                    <div class="pitch_box">
+                        <p class="pitch-title">
+                            Bullet Racing is an ambitious and driven team of 6 students @Windsor, England participating in the STEM Racing Competition. <br>Three seasons of design, enterprise, manufacturing and aerodynamic development, built around a single objective: maximum velocity over the 20-metre race.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="home_right">
+                    <div class="car-render-card">
+                        <img 
+                            src="big_render.jpeg" 
+                            alt="Car Render Placeholder" 
+                            class="car-image"                        >
+                    </div>
+
+                    <a href="#about" class="btn-learn-car">Learn about the competition</a>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                    <span class="marquee-text">|SPONSOR US|</span>
+                </div>
+            </div>
+
+        </section>
+        <section id="about" class="about_section">
+            <div class = "about_container">
+                <div class = "about_left">
+                    <h2 class = "about_title">ABOUT</h2>
+                    <h2 class = "about_title">COMPETITION</h2>
+                    <p class = "about_text">
+                        STEM Racing is an educational competition where teams of students design, build, test, and race miniature Formula 1-style cars. We employ cutting edge CAD and CFD Software to build and test 3d Models. <br>Throughout 3 years of competition thus far, we have developed strong cars for both Entry and Development classes, Winning Best Emerging Car Award. The competition also develops important skills such as problem-solving, communication, project management, and budgeting
+                    </p>
+                </div>
+                <div class = "about_right">
+                    <img src="back_render.jpg" alt="as" class="about_image">
+                </div>
+            </div>
+        </section>
+        <section class="competition-section">
+
+    <div class="competition-container">
+
+        <div class="competition-card" onclick="openModal('modal1')">
+            <h3> ENTRY CLASS 2024</h3>
+            <h3> 4/14</h3>
+            <p>Our first foray! Exploring the race and learning the ropes</p>
+            <span>VIEW MORE →</span>
+        </div>
+
+        <div class="competition-card" onclick="openModal('modal2')">
+            <h3>DEVELOPMENT CLASS 2025</h3>
+            <h3>7/16</h3>
+            <p>Taking our skills furtther in a vastly more competitive landscape</p>
+            <span>VIEW MORE →</span>
+        </div>
+
+        <div class="competition-card" onclick="openModal('modal3')">
+            <h3>DEVELOPMENT CLASS 2026</h3>
+            <h3>?/16</h3>
+            <p>Aiming for Podium finish and qualifying for nationals</p>
+            <span>VIEW MORE →</span>
+        </div>
+
+    </div>
+
+    <div id="modal1" class="competition-modal">
+        <div class="modal-content">
+
+            <button class="modal-close" onclick="closeModal('modal1')">
+                &times;
+            </button>
+
+            <div class="modal-image">
+                <img src="back_render.jpg" alt="Entry Class">
+            </div>
+
+            <div class="modal-text">
+                <h2>ENTRY CLASS</h2>
+
+                <p>
+                    Our first year of the tournament saw us learning the ropes and learning the basics of design and manufacturing. We developed a team, learnt key software and through rigorous trial and error, devised an aerodynamic and drag-minimising car. <br><br>Winning 4/14 overall and the Emerging Talent Award motivated us and enabled us to learn from the competition.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal2" class="competition-modal">
+        <div class="modal-content">
+
+            <button class="modal-close" onclick="closeModal('modal2')">
+                &times;
+            </button>
+
+            <div class="modal-image">
+                <img src="back_render.jpg" alt="Development Class">
+            </div>
+
+            <div class="modal-text">
+                <h2>DEVELOPMENT CLASS 2025</h2>
+                <p>
+                    Our second year of the tournament saw us taking our skills further in a vastly more competitive landscape. We utilised CNC modeling to reduce weight, demonstrated consistent project management and enterprise portfolios, developed a 40% faster car and came 7/16 amidst a challenging field. <br><br> We learnt aerodynamic theory, advanced simulation software and developed portfolios to demonstrate improved engineering skills. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="competition-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')">
+                &times;
+            </button>
+            <div class="modal-image">
+                <img src="back_render.jpg" alt="Our Achievements">
+            </div>
+            <div class="modal-text">
+                <h2>DEVELOPMENT CLASS 2026</h2>
+                <p>
+                    The car for this year's competition is currently under development. Relying on a breadth of competition experience and our strongest team yet, we are aiming for a podium finish and qualification to the National Round. <br><br> Keep tuned for updates and please consider sponsoring us to help us realise our ambitions!. 
+                </p>
+            </div>
+        </div>
+    </div>
+        </section>
+        <section id="team" class="team_section">
+    <div class="team-header">
+        <h1>MEET THE TEAM</h1>
+        <p>
+            Meet our talented and dedicated team members!
+        </p>
+    </div>
+
+
+    <div class="team-grid">
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 1">
+            </div>
+
+            <div class="team-info">
+                <h2>Darsh Rathod</h2>
+                <p>Project Manager and Website Designer</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 2">
+            </div>
+
+            <div class="team-info">
+                <h2>Jasper Wong</h2>
+                <p>Manufacturing Engineer</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 3">
+            </div>
+
+            <div class="team-info">
+                <h2>Louis Gaudicheau</h2>
+                <p>Sponsorships</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 4">
+            </div>
+
+            <div class="team-info">
+                <h2>Leonardo Lacava</h2>
+                <p>CAD Designer</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 5">
+            </div>
+
+            <div class="team-info">
+                <h2>Adam Eckles</h2>
+                <p>Marketing Manager</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="team-image">
+                <img src="bob.png" alt="Team Member 6">
+            </div>
+
+            <div class="team-info">
+                <h2>Manuel Ramos</h2>
+                <p>Treasurer</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </section>
+        <section id="contact" class="contact_section">
+
+    <div class="sponsors-header">
+        <h1>OUR SPONSORS</h1>
+        <p>We are proud to be supported by our sponsors.</p>
+    </div>
+
+
+    <div class="sponsors-grid">
+
+        <div class="sponsor-card">
+            <div class="sponsor-image">
+                <img src="bob.png" alt="Sponsor 1">
+            </div>
+
+            <div class="sponsor-info">
+                <h2>Your Company</h2>
+                <p>
+                    You could fund part of the manufacturing, kit or travel costs for our team. 
+                    We can promote your company via presentations, kit, social media, website and on car livery.
+                </p>
+            </div>
+        </div>
+
+        <div class="sponsor-card">
+            <div class="sponsor-image">
+                <img src="bob.png" alt="Sponsor 2">
+            </div>
+
+            <div class="sponsor-info">
+                <h2>Your Company</h2>
+                <p>
+                    Your company could fund part of the manufacturing, kit or travel costs for our team.
+                    We can promote your company via presentations, kit, social media, website and on car livery
+                </p>
+            </div>
+        </div>
+
+        <div class="sponsor-card">
+            <div class="sponsor-image">
+                <img src="bob.png" alt="Sponsor 3">
+            </div>
+
+            <div class="sponsor-info">
+                <a href="https://www.twbs.co.uk/" target="_blank">
+                    <h2>TWBS</h2>
+                </a>
+                <p>
+                    Our school provides us with funds and mentors to drive our engineering ambitions. 
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sponsor-us">
+
+        <div class="sponsor-us-header">
+            <h1>SPONSOR US</h1>
+            <p>
+                Interested in supporting our team? Get in touch with us.
+            </p>
+        </div>
+
+
+        <div class="contact-container">
+
+            <div class="contact-socials">
+
+                <h2>GET IN TOUCH</h2>
+
+                <p>
+                    We are always interested in working with organisations
+                    that share our passion for engineering, education and
+                    motorsport.
+                </p>
+
+                <p>
+                    If you are interested in becoming a sponsor or would like
+                    to learn more about our team, contact us using the form.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="https://www.instagram.com/bulletracing.f1?stkn=Nm9rZXp2cHVlOG1t&utm_source=qr" class="social-link">
+                        Instagram
+                    </a>
+
+                    <a href="mailto:darshr2010@gmail.com" class="social-link">
+                        Email
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="social-link">
+                        LinkedIn<br><br>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="contact_form">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="4ba6defa-12c1-4d44-a765-7ed35f715d2a"
+                >
+
+                <div class="form_group">
+                    <div class="form_label"><label for="name">Name</label></div>
+                    <input type="text"id="name"name="name"placeholder="Your name"required>
+                </div>
+
+                <div class="form_group">
+                    <div class="form_label"><label for="email">Email ID</label></div>
+                    <input type="email"id="email"name="email"placeholder="Your email address"required>
+                </div>
+
+
+                <div class="form_group">
+                    <div class="form_label"><label for="subject">Subject</label></div>
+                    <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>           
+                </div>
+
+                <div class="form_group">
+                    <div class="form_label"><label for="message">Message</label></div>
+                    <textarea id="message" name="message" placeholder="Write your message here..."
+                    ></textarea>
+                </div>
+                <div class="contact_button"><button type="submit" class="contact_button">Submit</button></div>
+                
+            </form>
+            </div>
+        </div>
+
+
+
+
+        </section>
+
+<script>
+
+</script>
+
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
